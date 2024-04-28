@@ -23,8 +23,7 @@ User's details:
 """
 
 def generate_content(prompt):
-    full_prompt = prompt_template.format(prompt=prompt)
-    response = model.generate_content(full_prompt)
+    response = model.generate_content(prompt)
     return response.text
 
 st.title("👤 AI Self-Introduction Generator")
