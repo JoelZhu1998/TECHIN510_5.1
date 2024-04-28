@@ -26,9 +26,9 @@ def generate_content(prompt):
     response = model.generate_content(prompt)
     return response.text
 
-st.title("🏝️ AI Travel Planning")
+st.title("🏝️ AI Self-Introduction Generator")
 
-prompt = st.text_area("Enter your next travel request (days, destination, activities, etc.):")
-if st.button("Give me a plan!"):
+prompt = st.text_area("Enter your name, profession, interests, and a fun fact about yourself:")
+if st.button("Generate My Introduction"):
     reply = generate_content(prompt)
     st.write(reply)
