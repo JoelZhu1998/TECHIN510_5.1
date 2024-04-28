@@ -10,15 +10,17 @@ genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 model = genai.GenerativeModel('gemini-pro')
 
 prompt_template = """
-You are an expert at crafting engaging self-introductions.
+You are an expert at planning oversea trips.
 
-Please generate a self-introduction based on the following details provided by the user:
-- Name
-- Profession
-- Interests
-- A fun fact about them
+Please take the users request and plan a comprehensive trip for them.
 
-User's details:
+Please include the following details:
+- The destination
+- The duration of the trip
+- The activities that will be done
+- The accommodation
+
+The user's request is:
 {prompt}
 """
 
@@ -26,9 +28,9 @@ def generate_content(prompt):
     response = model.generate_content(prompt)
     return response.text
 
-st.title("👤 AI Self-Introduction Generator")
+st.title("🏝️ AI Travel Planning")
 
-prompt = st.text_area("Enter your name, profession, interests, and a fun fact about yourself:")
-if st.user_button("Generate My Introduction"):
-    introduction = generate_content(prompt)
-    st.write(introduction)
+prompt = st.text_area("Enter your next travel request (days, destination, activities, etc.):")
+if st.button("Give me a plan!"):
+    reply = generate_content(prompt)
+    st.write(reply)
