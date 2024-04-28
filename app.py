@@ -10,17 +10,15 @@ genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 model = genai.GenerativeModel('gemini-pro')
 
 prompt_template = """
-You are an expert at planning oversea trips.
+You are an expert at crafting engaging self-introductions.
 
-Please take the users request and plan a comprehensive trip for them.
+Please generate a self-introduction based on the following details provided by the user:
+- Name
+- Profession
+- Interests
+- A fun fact about them
 
-Please include the following details:
-- The destination
-- The duration of the trip
-- The activities that will be done
-- The accommodation
-
-The user's request is:
+The user's detail is:
 {prompt}
 """
 
