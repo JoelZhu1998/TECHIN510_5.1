@@ -28,7 +28,7 @@ def generate_content(prompt):
 
 st.title("👤 AI Self-Introduction Generator")
 
-user_details = st.text_area("Enter your name, profession, interests, and a fun fact about yourself:")
+prompt = st.text_area("Enter your name, profession, interests, and a fun fact about yourself:")
 if st.user_button("Generate My Introduction"):
-    introduction = generate_content(user_details)
+    introduction = generate_content(prompt)
     st.write(introduction)
