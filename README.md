@@ -1,12 +1,11 @@
-# TECHIN510_Lab3
+# TECHIN510_Lab5
 
-This app is to store and retrieve prompts, which consist of a title and a prompt text.
+This app is to provide an automated way to generate personalized self-introductions using advanced natural language processing techniques. The tool is designed to help users create engaging and comprehensive introductions with ease.
 
 ## Features
 
-- **User-Friendly Interface**: Simple text areas and buttons for easy interaction.
-- **Customizable Tones**: Options to generate introductions in various tones.
-- **Real-Time Generation**: Introductions are generated instantly with a click.
+- **Natural Language Generation: Outputs are created using state-of-the-art natural language processing to ensure clarity and engagement.
+- **Multi-Lingual Support: Create introductions in multiple languages to reach a wider audience.
 
 ## Lessons Learned
 
